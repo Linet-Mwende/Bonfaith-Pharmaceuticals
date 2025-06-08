@@ -2,6 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: white;
+    justify-content: center;
 }
 
 .navbar {
@@ -15,12 +17,341 @@ body {
 .navbar a {
     margin: 0 15px;
     text-decoration: none;
-    color: #003366; /* Dark Blue */
-    font-size: 18px;
-    font-weight: bold;
+    color: rgb(38, 66, 139); 
+    font-size: 32px;
+    font-weight:lighter;
     transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #007acc; /* Light Blue */
+    color: rgb(72, 209, 204); 
 }
+
+.Home {
+  background-image: url('images/bonfaith\ background\ image.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255,);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay h1 {
+  color: #1f3a93;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+.overlay p {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 2em;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1.1em;
+  background-color: #c0c0a0;
+  color: #1f3a93;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #a8a894;
+}
+
+.about-us {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f8f9fb;
+}
+
+.about-text {
+  flex: 1 1 400px;
+  max-width: 600px;
+  padding: 20px;
+  color: #17356D;
+}
+
+.about-text h2 {
+  color: #5CD6D6;
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.carousel-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.carousel-title {
+  font-size: 2em;
+  background-color: #b9b9a3;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  flex: 0 0 100%;
+  background: #f6f6f6;
+  border-radius: 20px;
+  margin: 0 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.title-dark {
+  color: #1c3170;
+  font-weight: bold;
+}
+
+.title-light {
+  color: #8cdde0;
+}
+
+.feature {
+  color: #1c3170;
+  font-weight: 500;
+}
+
+.desc {
+  color: #8cdde0;
+  margin-top: 10px;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  gap: 15px;
+}
+
+.carousel-nav button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  height: 10px; 
+  width: 10px;
+  background-color: #c4c4c4;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.active {
+  background-color: #1c3170;
+}
+
+
+.testimonials-section {
+    width: 100%;
+    max-width: 800px; /* Max width for the section */
+    margin-bottom: 40px; /* Space between sections */
+    text-align: center;
+}
+
+.section-title {
+    background-color: rgb(182, 182, 161); /* A shade of green/grey from the image */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block; /* Allows padding and background to fit content */
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px; /* Space between testimonial cards */
+    justify-content: center;
+}
+
+.testimonial-card {
+    background-color: #f7f7f7; /* Off-white for the card background */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: left;
+    position: relative;
+    overflow: hidden; /* To contain the absolute positioned quote icon if needed */
+    justify-content: center;
+}
+
+
+
+.testimonial-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color:rgb(38, 66, 139);
+    margin-bottom: 15px;
+    position: relative; /* Bring text above the quote icon */
+    z-index: 1;
+    padding-left: 50px; /* Make space for the quote icon */
+}
+
+.author-name {
+    font-weight: bold;
+    color: rgb(72, 209, 204);
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.author-title {
+    color: rgb(72, 209, 204);
+    font-size: 0.9em;
+}
+
+/* Brand Voice Section */
+.brand-voice-container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin-top: 40px; /* Space from testimonials */
+}
+
+.brand-voice-title {
+    font-size: 2.2em;
+    color:rgb(38, 66, 139);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between text and stars */
+}
+
+.star {
+    color: rgb(182, 182, 161); /* Or any other color you prefer for stars */
+    font-size: 0.9em; /* Slightly smaller than text */
+}
+
+.Voice {
+    colour:white;
+    background-color: rgb(72, 209, 204);
+}
+
+.team-section {
+    width: 100%;
+    max-width: 1000px; /* Limit overall width */
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff; /* White background for the section */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.section-title {
+    font-size: 2em;
+    font-weight: 600; /* Semi-bold */
+    color: #5d5d5d; /* Dark gray, similar to the image */
+    background-color: #d3d3d3; /* Gray background for the title */
+    display: inline-block; /* Makes background only cover the text */
+    padding: 8px 30px; /* Padding for the title background */
+    border-radius: 5px;
+    margin-bottom: 50px; /* Space below the title */
+}
+
+.team-members-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    gap: 40px; /* Space between team member cards */
+    text-align: centre;
+}
+
+.team-member-card {
+    text-align: center;
+    width: 250px; /* Fixed width for each card */
+    margin: 0; /* Reset margin as gap handles spacing */
+}
+
+.member-photo {
+    width: 180px; /* Fixed width for photos */
+    height: 180px; /* Fixed height for photos */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border: 3px solid #eee; /* Light border around photos */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for photos */
+    margin-bottom: 15px; /* Space below photo */
+    text-align: center;
+}
+
+.member-role {
+    font-size: 1.1em;
+    font-weight: 600; /* Semi-bold */
+    color:rgb(38, 66, 139);
+    margin-bottom: 5px; /* Space between role and name */
+}
+
+.member-name {
+    font-size: 1em;
+    color: rgb(38, 66, 139);
+    margin-top: 0;
+}
+
+
