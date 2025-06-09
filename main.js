@@ -71,3 +71,19 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
     this.reset(); // Clears the form
 });
+// Get the current count from localStorage
+let visitCount = localStorage.getItem('visitCount');
+
+// If not present, initialize to 0
+if (!visitCount) {
+  visitCount = 0;
+}
+
+// Convert to number and increment
+visitCount = parseInt(visitCount) + 1;
+
+// Update localStorage
+localStorage.setItem('visitCount', visitCount);
+
+// Display on page
+document.getElementById('visitCount').textContent = visitCount;
