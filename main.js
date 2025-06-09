@@ -83,22 +83,10 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
     this.reset(); // Clears the form
 });
-// Get the current count from localStorage
-let visitCount = localStorage.getItem('visitCount');
-
-// If not present, initialize to 0
-if (!visitCount) {
-  visitCount = 0;
-}
-
-// Convert to number and increment
-visitCount = parseInt(visitCount) + 1;
-
-// Update localStorage
-localStorage.setItem('visitCount', visitCount);
-
-// Display on page
-document.getElementById('visitCount').textContent = visitCount; 
+let count = localStorage.getItem('visitCount') || 0;
+count++;
+localStorage.setItem('visitCount', count);
+document.getElementById('visitorCount').innerText = 'You've visited this site ${count} times.';
 
 let context = `Bonfaith Pharmaceuticals is a healthcare startup founded by local pharmacists in Kenya. 
 The founders were inspired by the lack of essential drugs in their community. 
@@ -112,6 +100,7 @@ Our long-term goal is to become the leading provider of community-based pharmace
 // fetch('context.txt').then(res => res.text()).then(txt => context = txt);
 
 document.getElementById("send-btn").addEventListener("click", sendMessage);
+
 
 function sendMessage() {
     console.log("Send button clicked!");
