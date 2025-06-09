@@ -42,3 +42,32 @@ dots.forEach((dot, index) => {
     updateCarousel(index);
   });
 });
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+    let feedback = document.getElementById("feedback");
+
+    if (!name || !email || !message) {
+        feedback.textContent = "All fields are required!";
+        feedback.style.color = "red";
+        feedback.style.display = "block";
+        return;
+    }
+
+    if (!email.includes("@") || !email.includes(".")) {
+        feedback.textContent = "Please enter a valid email address!";
+        feedback.style.color = "red";
+        feedback.style.display = "block";
+        return;
+    }
+
+    feedback.textContent = "Message sent successfully!";
+    feedback.style.color = "green";
+    feedback.style.display = "block";
+
+    this.reset(); // Clears the form
+});
