@@ -302,6 +302,44 @@ button:hover {
     background-color: rgb(72, 209, 204);
 }
 
+.faq-container {
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-container h2{
+    background-color: rgb(182, 182, 161);
+    color: rgb(245, 245, 245);
+    width: 50%;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 10px;
+    background: rgb(245, 245, 245);
+    border: rgb(38, 66, 139);
+    cursor: pointer;
+    font-weight: bold;
+    text-align: left;
+    color: rgb(38, 66, 139);
+}
+
+.faq-answer {
+    padding: 10px;
+    display: none;
+    background: #fff;
+    border-radius: 5px;
+    color: rgb(72, 209, 204);
+}
+
 .team-section {
     width: 100%;
     max-width: 1000px; /* Limit overall width */
@@ -475,7 +513,7 @@ button:hover {
 }
 
 .social-links img {
-    width: 25px; /* Adjust size as needed */
+    width: 25px; 
     height: auto;
     transition: transform 0.3s;
 }

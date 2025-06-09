@@ -43,6 +43,18 @@ dots.forEach((dot, index) => {
   });
 });
 
+document.querySelectorAll(".faq-question").forEach((question) => {
+    question.addEventListener("click", function () {
+        let openAnswer = document.querySelector(".faq-answer:not([style*='display: none'])");
+        if (openAnswer && openAnswer !== this.nextElementSibling) {
+            openAnswer.style.display = "none";
+        }
+        this.nextElementSibling.style.display =
+            this.nextElementSibling.style.display === "block" ? "none" : "block";
+    });
+});
+
+
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form submission
 
@@ -86,4 +98,4 @@ visitCount = parseInt(visitCount) + 1;
 localStorage.setItem('visitCount', visitCount);
 
 // Display on page
-document.getElementById('visitCount').textContent = visitCount;
+document.getElementById('visitCount').textContent = visitCount; 
