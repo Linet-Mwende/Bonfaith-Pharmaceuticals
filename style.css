@@ -522,3 +522,12 @@ button:hover {
     transform: scale(1.1);
 }
 
+.counter-container {
+    text-align: center;
+    font-size: 18px;
+    background: #f0d7a1; /* Bonfaith branding color */
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+    margin: 20px auto;
+}
