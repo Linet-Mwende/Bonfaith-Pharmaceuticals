@@ -99,3 +99,48 @@ localStorage.setItem('visitCount', visitCount);
 
 // Display on page
 document.getElementById('visitCount').textContent = visitCount; 
+
+let context = `Bonfaith Pharmaceuticals is a healthcare startup founded by local pharmacists in Kenya. 
+The founders were inspired by the lack of essential drugs in their community. 
+Bonfaith aims to provide high-quality, affordable, and accessible medications using innovative delivery methods such as nano-technology and herbal extracts. 
+Our key products include PainRelief fast-acting tablets, AntiCoagulant micro-dose vials, and ImmunoBoost herbal supplements. 
+Our mission is to improve community health by offering fair prices and consistent access to medication. 
+To support or contact us, visit our website or reach out through the contacts listed in our About section. 
+Our long-term goal is to become the leading provider of community-based pharmaceutical care in East Africa.`;
+
+// Optional bonus: load from a public file
+// fetch('context.txt').then(res => res.text()).then(txt => context = txt);
+
+document.getElementById("send-btn").addEventListener("click", sendMessage);
+
+function sendMessage() {
+    console.log("Send button clicked!");
+}
+
+function setSample(text) {
+  document.getElementById("user-input").value = text;
+}
+
+async function sendMessage() {
+  const inputBox = document.getElementById("user-input");
+   //const chatWindow = document.getElementById("chat-window"); //
+  const chatWindow = document.querySelector(".chat-window");
+
+
+  const userMessage = inputBox.value.trim();
+  if (!userMessage) return;
+
+  chatWindow.innerHTML += `<div><strong>You:</strong> ${userMessage}</div>`;
+  inputBox.value = "";
+
+  const response = await puter.ai.chat({
+    messages: [
+      { role: "system", content: context },
+      { role: "user", content: userMessage }
+    ]
+  });
+
+  chatWindow.innerHTML += `<div><strong>Bonfaith AI:</strong> ${response.message.content}</div>`;
+  chatWindow.scrollTop = chatWindow.scrollHeight;
+}
+

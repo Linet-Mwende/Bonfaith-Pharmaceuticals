@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
      <ul class="navbar">
         <li> <a href="#home">Home</a> </li>
@@ -28,7 +29,7 @@
   </div>
     </section>
 
-  <section id="about us">
+  <section id="about us"
   
   class="about-us">
     <div class="about-text">
@@ -168,13 +169,23 @@
     <section id="chatbot">
     <div class="chat-container">
     <div class="chat-header">AI Assistant</div>
-    <div class="chat-display">
+    <div class="chat-window">
         <div class="chat-bubble bot"> . . . </div>
     </div>
     <div class="chat-input">
-        <input type="text" placeholder="Ask your question...">
-        <img src="images/send button.png">
+        <input type="text" id="user-input" placeholder="Ask your question..."/>
+        <button id="send-btn">
+        <img src="images/send button.png" id="send-btn" alt="Send" style="cursor:pointer;" />
+        </button>
     </div>
+    <div class="sample-questions">
+    <p>Try:</p>
+    <button onclick="setSample('Who founded Bonfaith?')">Who founded Bonfaith?</button>
+    <button onclick="setSample('What does Bonfaith do?')">What does Bonfaith do?</button>
+    <button onclick="setSample('What products do you offer?')">What products do you offer?</button>
+    <button onclick="setSample('How can I support or contact you?')">How can I support or contact you?</button>
+    <button onclick="setSample('What is Bonfaith’s long-term vision?')">What is Bonfaith’s long-term vision?</button>
+  </div>
 </div>
 </section>
 
@@ -208,7 +219,7 @@
 
 
 
-    
+    <script src="https://js.puter.com/v2/"></script>
     <script src="main.js"></script>
     
 </body>
