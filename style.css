@@ -500,7 +500,7 @@ button:hover {
     color: rgb(38, 66, 139);
     text-align: center;
     padding: 15px 0;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
